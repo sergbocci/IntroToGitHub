@@ -61,7 +61,7 @@ int bestStrandMatch(string input_strand, string target_strand)
         cout << "Best similarity score: 0.0" << endl; // prints the score found from invalid
         return -1;
     }
-    for (int i = 0; (unsigned)i <= input_strand.length() - target_strand.length(); i++)
+    for (int i = 0; (unsigned)i <= input_strand.length() - target_strand.length(); i++) //loops through proper length so it doesn't go out of bounds
     {                                                                           // loops through the input_strand with a valid length of target strand
         string current_strand = input_strand.substr(i, target_strand.length()); // declare and initialize current_strand so we don't modify original strand
         //.substr(i,target_strand.length()) creates a valid substring length, otherwise, I have found out that it will never overcome original declared score
@@ -547,3 +547,4 @@ int main()
 
     return 0;
 }
+//more comments for CSCI 1000 class - adding 
