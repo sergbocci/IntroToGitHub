@@ -98,6 +98,7 @@ int main()
             if (validateDouble(arr[i]) == false){
                 cout<<"invalid num"<<endl;
                 allValid = false;
+                return -1;
             }else{
                 if(i == 0){
                     x += stod(arr[i]);
