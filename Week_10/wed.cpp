@@ -48,6 +48,7 @@ class Bicycle
 You should typically have a get + set method for any member that will need to be accessed outside of class
 */
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Automobile{
@@ -64,12 +65,57 @@ class Automobile{
             condition = co;
             cout<<"calling constructor"<<endl;
         }
+        Automobile(){
+            //default constructor
+            make = "subaru";
+            model = "outback";
+            year = 2010;
+            condition = "used";
+            cout<<"calling default constructor"<<endl;
+        }
+        //get and set for make
+        void setMake(string mo){
+            //only allow Ford and Subaru to be valid make
+            if(mo == "Ford" or mo == "Subaru"){
+                make = mo;
+            }else{
+                cout<<"not a valid entry"<<endl;
+            }
+        }
+        string getMake(){
+            return make;
+        }
+        //model
+        //setModel and getModel
+        void setModel(string m){
+            model = m;
+        }
+        string getModel(){
+            return model;
+        }
+        //setCondition and getCondition
+        //setYear and getYear
+        void setYear(int y){
+            year = y;
+        }
+        int getYear(){
+            return year;
+        }
 };
+
 
 
 int main(){
     //each of these is an instance of automobile
     Automobile truck("Ford", "Ranger", 2021, "new");
     Automobile truck2("Ford", "F150", 2020, "used");
+
+    //these are created using the default constructor
+    Automobile car;
+    Automobile car2;
+    Automobile Subaru;
+    string m = Subaru.getMake(); //call public get make method
+    car2.setMake("Toyota"); //this should say not valid
+    cout<<"the year is "<<truck.getYear()<<endl;
     return 0;
 }
