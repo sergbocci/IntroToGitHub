@@ -1,0 +1,7 @@
+Center of Mass:
+X: 3.09667
+Y: 2.16667
+Z: 0.253333
+
+Number of valid entries: 3
+Process completed successfully!
