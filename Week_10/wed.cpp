@@ -117,5 +117,7 @@ int main(){
     string m = Subaru.getMake(); //call public get make method
     car2.setMake("Toyota"); //this should say not valid
     cout<<"the year is "<<truck.getYear()<<endl;
+    cout<<"the other year is "<<truck.getYear()<<endl;
+    cout<<"the subaru year is "<<Subaru.getYear()<<endl;
     return 0;
 }
