@@ -33,52 +33,12 @@ initialize - what is position and direction of bug when object created
 displayLocation - print the location + direction of the bug
 */
 #include <iostream>
+#include "CashRegister.h"
 using namespace std;
 //implement a cash register class to track items purchased, and individual costs
 //class prototype - defines what's in the class, but not the implementation
-class CashRegister{
-    private:
-        int itemCount; //count of items purchased
-        double totalPrice; //sum of prices of items purchased
-        double items[100]; //individual prices
-    public:
-        CashRegister();
-        void clear(); //reset itemCount, totalPrice to 0
-        void addItem(double price); //add an item to the items array
-        double getTotal() const; //return the totalPrice 
-        int getCount() const; //return the itemCount
-        void displayItems();
-};
 //constructor
 //:: means member of 
-CashRegister::CashRegister(){
-    //these are member variables of CashRegister
-    itemCount = 0;
-    totalPrice = 0;
-}
-//this is the clear method that is in the CashRegister class
-//the type is void; member of CashRegister, function name is clear
-void CashRegister::clear(){
-    itemCount = 0;
-    totalPrice = 0;
-}
-void CashRegister::addItem(double price){
-    //add price to array, increment itemCount, and add price to totalPrice
-    items[itemCount] = price; //add to items array
-    itemCount++;
-    totalPrice += price;
-}
-double CashRegister::getTotal() const{
-    return totalPrice;
-}
-int CashRegister::getCount() const{
-    return itemCount;
-}
-void CashRegister::displayItems(){
-    for(int i = 0; i < itemCount; i++){
-        cout<<items[i]<<endl;
-    }
-}
 int main(){
     //instance of CashRegister
     CashRegister cr;
