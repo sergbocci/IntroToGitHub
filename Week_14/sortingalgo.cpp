@@ -35,7 +35,6 @@ Quick sort:
      greater than pivot moved right. 
     Applies to smaller + smaller chunks of array. Selecting pivot and
         sorting relative to pivot value
-    
 */
 
 
